@@ -21,8 +21,12 @@ try:
             page = context.new_page()
             page.on('pageerror', lambda error: errors.append(str(error)))
             page.goto(url, wait_until='networkidle')
+            page.screenshot(path=str(OUT / f'home-{width}.png'), full_page=True)
             assert page.locator('.game-card').count() == 3
-            assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'Overflow at {width}'
+            overflow = page.evaluate('''() => Array.from(document.querySelectorAll('body *'))
+                .filter(el => {const r = el.getBoundingClientRect(); return r.width && (r.right > innerWidth || r.left < 0);})
+                .map(el => ({tag: el.tagName, class: el.className, right: el.getBoundingClientRect().right}))''')
+            assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), f'Overflow at {width}: {overflow}'
             for link in page.locator('.play-link').all():
                 assert link.is_visible() and link.bounding_box()['height'] >= 44
             boxes = [card.bounding_box() for card in page.locator('.game-card').all()]
@@ -30,7 +34,6 @@ try:
                 assert boxes[1]['y'] >= boxes[0]['y'] + boxes[0]['height']
             else:
                 assert len({round(box['y']) for box in boxes}) == 1
-            page.screenshot(path=str(OUT / f'home-{width}.png'), full_page=True)
             page.get_by_role('button', name='分享入口').click()
             assert page.locator('#share-dialog').is_visible()
             assert page.locator('.qr-code').evaluate('(image) => image.complete && image.naturalWidth > 0')
