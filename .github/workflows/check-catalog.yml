@@ -1,0 +1,33 @@
+name: Check classroom catalog
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/sync_games.py --check
+      - run: python3 -m unittest discover -s tests -v
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright==1.51.0
+      - run: python3 -m playwright install --with-deps chromium
+      - run: python3 tests/browser_check.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: classroom-browser-screenshots
+          path: test-results/
