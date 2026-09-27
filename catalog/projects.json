@@ -1,0 +1,23 @@
+[
+  {
+    "repo": "huangr76/chuzhongshiji-siqi",
+    "label": "庄园篇 · 入口一",
+    "topic": "西欧庄园",
+    "theme": "forest",
+    "art": "gate"
+  },
+  {
+    "repo": "huangr76/siqi-manor-escape",
+    "label": "庄园篇 · 入口二",
+    "topic": "西欧庄园",
+    "theme": "ochre",
+    "art": "manor"
+  },
+  {
+    "repo": "huangr76/charlemagne-800",
+    "label": "帝国篇 · 四站研学",
+    "topic": "法兰克王国与西欧封建制度",
+    "theme": "wine",
+    "art": "crown"
+  }
+]

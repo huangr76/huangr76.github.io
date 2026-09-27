@@ -1,0 +1,53 @@
+{
+  "verified_at": "2026-09-27T08:14:26.314725+00:00",
+  "games": [
+    {
+      "repo": "huangr76/chuzhongshiji-siqi",
+      "label": "庄园篇 · 入口一",
+      "topic": "西欧庄园",
+      "theme": "forest",
+      "art": "gate",
+      "title": "走出中世纪 01——你能否逃出庄园？",
+      "description": "走出中世纪01：以农奴视角体验西欧庄园。四幕分支剧情、五种结局、历史手记与通关复盘。",
+      "url": "https://huangr76.github.io/chuzhongshiji-siqi/",
+      "source_url": "https://raw.githubusercontent.com/huangr76/chuzhongshiji-siqi/044d08bccc37434780f2023572672c57d0e07475/index.html",
+      "source_sha": "044d08bccc37434780f2023572672c57d0e07475",
+      "html_sha256": "7ad1045f4ae204add863b18929cb0c9bae2c3f1c96cfcbc54e2baf4d63fbfe1b",
+      "deployment_url": "https://github.com/huangr76/chuzhongshiji-siqi/actions/runs/34927225595",
+      "deployed_at": "2026-09-15T04:02:12Z",
+      "deployment_status_url": "https://api.github.com/repos/huangr76/chuzhongshiji-siqi/deployments/6451434145/statuses"
+    },
+    {
+      "repo": "huangr76/siqi-manor-escape",
+      "label": "庄园篇 · 入口二",
+      "topic": "西欧庄园",
+      "theme": "ochre",
+      "art": "manor",
+      "title": "走出中世纪 01——你能否逃出庄园？",
+      "description": "走出中世纪01：以农奴视角体验西欧庄园。四幕分支剧情、五种结局、历史手记与通关复盘。",
+      "url": "https://huangr76.github.io/siqi-manor-escape/",
+      "source_url": "https://raw.githubusercontent.com/huangr76/siqi-manor-escape/b246880e9fbbc2cc0fc9d7d57cf49f83dca1e456/index.html",
+      "source_sha": "b246880e9fbbc2cc0fc9d7d57cf49f83dca1e456",
+      "html_sha256": "fe92e47eb2ebc6d17c00bea5db1c96edfdeb5f0d11ec6232169f1078834631ee",
+      "deployment_url": "https://github.com/huangr76/siqi-manor-escape/actions/runs/34933153942",
+      "deployed_at": "2026-09-15T05:32:56Z",
+      "deployment_status_url": "https://api.github.com/repos/huangr76/siqi-manor-escape/deployments/6452412698/statuses"
+    },
+    {
+      "repo": "huangr76/charlemagne-800",
+      "label": "帝国篇 · 四站研学",
+      "topic": "法兰克王国与西欧封建制度",
+      "theme": "wine",
+      "art": "crown",
+      "title": "穿越公元800年 · 查理曼帝国实录",
+      "description": "穿越公元800年，探访查理曼帝国的四处现场。包含配对、排序、选择题与可作答的历史思考。",
+      "url": "https://huangr76.github.io/charlemagne-800/",
+      "source_url": "https://raw.githubusercontent.com/huangr76/charlemagne-800/336c3f8c89457aa0792ab9af3b3e61ad7510d4b6/index.html",
+      "source_sha": "336c3f8c89457aa0792ab9af3b3e61ad7510d4b6",
+      "html_sha256": "9671646de30e7d1a6d5013d1eee8341ac4e63e8cebe80004d7983343c541a9f1",
+      "deployment_url": "https://github.com/huangr76/charlemagne-800/actions/runs/35006195811",
+      "deployed_at": "2026-09-15T18:14:35Z",
+      "deployment_status_url": "https://api.github.com/repos/huangr76/charlemagne-800/deployments/6465427091/statuses"
+    }
+  ]
+}
